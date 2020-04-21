@@ -1,0 +1,11 @@
+version: '3'
+services:
+  pcf-kkb-dr:
+    image: test:1
+    env_file:
+    - tanzu.env
+    deploy:
+      restart_policy:
+        condition: any
+        delay: 10s
+        max_attempts: 5
