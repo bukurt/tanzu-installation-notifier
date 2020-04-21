@@ -20,7 +20,7 @@ Required configuration parameters are defined in table.
 |OPSMAN_PASSWORD      |Base64 coded password of ospman login user |OPSMAN_PASSWORD=MTIzNDU2|Yes
 |SLACK_URL|Slack API endpoint to push notification messages.| SLACK_URL=https://hooks.slack.com/services/TL2BSJFTZ/BL73TSGJDS/hTfKSTYfksdKHGStdfıasg|Yes
 |SSH_USER  |Ssh user for accessing to OpsManager vm. Default is ubuntu |SSH_USER=ubuntu|No
-|SSH_KEY  |Ssh key for accessing to OpsManager vm. |SSH_KEY=-----BEGIN RSA PRIVATE KEY-----\n....\n-----END RSA PRIVATE KEY----- |Yes
+|SSH_KEY  |Ssh key for accessing to OpsManager vm. |SSH_KEY=-----BEGIN RSA PRIVATE KEY-----\nJSKLJnsd....\n...YASGDklbj\n-----END RSA PRIVATE KEY----- |Yes
 |HTTP_PROXY|If you are in corporate, it’s necessary to call slack API. It uses global format http://user:pass@10.0.0.50:8080  |HTTP_PROXY=http://10.0.0.50:8080|No
 |HTTPS_PROXY|If you are in corporate, it’s necessary to call slack API. It uses global format http://user:pass@10.0.0.50:8080  |HTTPS_PROXY=http://10.0.0.50:8080|No
 |NO_PROXY|If your OpsManager vm cannot be reached over proxy, set this to OpsManager IP address|NO_PROXY=10.0.0.10|No
