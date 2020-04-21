@@ -3,12 +3,21 @@ When a new update or upgrade process is started in Tanzu Application Service (TA
 
 Hit the apply button and get slack notifications.
 
-# Prerequisites
+# Installation
 
-    export VMWARE_PASSWORD='vCenter Password'
-    export VMWARE_USER='vCenter Username'
-    export VMWARE_HOST='vCenter IP/FQDN'
+Clone repo to your local.
+    $ git clone https://github.com/kurtburak/tanzu-installation-notifier.git
+    $ cd tanzu-installation-notifier/
+Edit variables.
+    $ vi tanzu.env
+Run!
+    $ docker-compose up -d
 
+Optioanaly you can build image localy. Edit docker-compose.yaml and run!
+    $ docker build . -t tanzu-install-watcher:local
+    $ sed -i 's/bkurt\/tanzu-install-watcher:0.1/tanzu-install-watcher:local/g' docker-compose.yml
+    $ docker-compose up -d
+    
 # Configuration Reference
 
 Required configuration parameters are defined in table.
