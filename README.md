@@ -15,7 +15,7 @@ Required configuration parameters are defined in table.
 
 | Variable Name  |Definition                     |Example                      |Required|
 |----------------|-------------------------------|-----------------------------|----------
-|OPSMAN_IP    |IP address of Ops Manager VM.         |10.0.0.10      |Yes
-|OPSMAN_USER     |Login user for Ops Manager.           |admin          |Yes
-|OPSMAN_PASSWORD      |Base64 coded password of ospman login user | MTIzNDU2|Yes
-|SSH_USER  |Ssh user for accessing to OpsManager vm. Default is ubuntu | ubuntu|No
+|OPSMAN_IP    |IP address of Ops Manager VM.         |OPSMAN_IP=10.0.0.10      |Yes
+|OPSMAN_USER     |Login user for Ops Manager.           |OPSMAN_USER=admin          |Yes
+|OPSMAN_PASSWORD      |Base64 coded password of ospman login user |OPSMAN_PASSWORD=MTIzNDU2|Yes
+|SSH_USER  |Ssh user for accessing to OpsManager vm. Default is ubuntu |SSH_USER=ubuntu|No
