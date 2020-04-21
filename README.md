@@ -6,12 +6,20 @@ Hit the apply button and get slack notifications.
 # Installation
 
 Clone repo to your local.
+
     ```$ git clone https://github.com/kurtburak/tanzu-installation-notifier.git
-    $ cd tanzu-installation-notifier/```
+    $ cd tanzu-installation-notifier/
+    ```
+    
 Edit variables.
-    ```$ vi tanzu.env```
+
+    ```$ vi tanzu.env
+    ```
+    
 Run!
-    ```$ docker-compose up -d```
+
+    ```$ docker-compose up -d
+    ```
 
 Optioanaly you can build image localy. Edit docker-compose.yaml and run!
     ```$ docker build . -t tanzu-install-watcher:local
