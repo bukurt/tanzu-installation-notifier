@@ -1,7 +1,7 @@
 version: '3'
 services:
-  pcf-kkb-dr:
-    image: test:1
+  tanzu-watch-01:
+    image: bkurt/
     env_file:
     - tanzu.env
     deploy:
