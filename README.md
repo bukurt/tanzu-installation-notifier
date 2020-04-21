@@ -18,7 +18,7 @@ Run!
 
     $ docker-compose up -d
 
-Optioanaly you can build image localy. Edit docker-compose.yaml and run!
+Optionally you can build image locally. Edit docker-compose.yaml and run!
 
     $ docker build . -t tanzu-install-watcher:local
     $ sed -i 's/bkurt\/tanzu-install-watcher:0.1/tanzu-install-watcher:local/g' docker-compose.yml
