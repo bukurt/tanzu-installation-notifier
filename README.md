@@ -19,3 +19,14 @@ Required configuration parameters are defined in table.
 |OPSMAN_USER     |Login user for Ops Manager.           |OPSMAN_USER=admin          |Yes
 |OPSMAN_PASSWORD      |Base64 coded password of ospman login user |OPSMAN_PASSWORD=MTIzNDU2|Yes
 |SSH_USER  |Ssh user for accessing to OpsManager vm. Default is ubuntu |SSH_USER=ubuntu|No
+|SSH_KEY  |Ssh key for accessing to OpsManager vm. |SSH_KEY=-----BEGIN RSA PRIVATE KEY-----\n....\n-----END RSA PRIVATE KEY----- |Yes
+|HTTP_PROXY|If you are in corporate, it’s necessary to call slack API  |HTTP_PROXY=http://msywebex:password@10.0.0.50:8080 or HTTP_PROXY=http://msywebex@10.0.0.50:8080 or HTTP_PROXY=http://10.0.0.50:8080|No
+||||
+||||
+||||
+||||
+||||
+||||
+||||
+||||
+
