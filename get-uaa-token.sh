@@ -27,7 +27,7 @@ scp opsman_user $SSH_USER@$OPSMAN_IP:~/opsman_user
 ssh -l $SSH_USER $OPSMAN_IP 'bash -s' << 'ENDSSH'
         uaac target http://localhost:8080/uaa > /dev/null
         opsman_user=`cat ~/opsman_user`
-        sec=`sudo grep "opsman.admin" /home/tempest-web/ramdisk/uaa/config/uaa.yml | grep $opsman_user | awk -F "|" '{print $2}'`
+        sec=`sudo grep "opsman.admin" /home/tempest-web/ramdisk/uaa/config/uaa.yml | grep $opsman_user | grep "OpsMan" | grep "Admin" | awk -F "|" '{print $2}'`
         rm -f ~/opsman_user
         uaac token owner get opsman $opsman_user -s "" -p $sec > /dev/null
         token=$(uaac context | grep access_token | awk '{print $2}')
