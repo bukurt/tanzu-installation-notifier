@@ -1,7 +1,7 @@
 version: '3'
 services:
   tanzu-watcher:
-    image: bkurt/tanzu-install-watcher:0.1
+    image: bkurt/tanzu-install-watcher:latest
     env_file:
     - tanzu.env
     deploy:

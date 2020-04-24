@@ -32,7 +32,6 @@ Required configuration parameters are defined in table.
 |----------------|-------------------------------|-----------------------------|----------
 |OPSMAN_IP    |IP address of Ops Manager VM.         |OPSMAN_IP=10.0.0.10      |Yes
 |OPSMAN_USER     |Login user for Ops Manager.           |OPSMAN_USER=admin          |Yes
-|OPSMAN_PASSWORD      |Base64 coded password of ospman login user |OPSMAN_PASSWORD=MTIzNDU2|Yes
 |SLACK_URL|Slack API endpoint to push notification messages.| SLACK_URL=https://hooks.slack.com/services/TL2BSJFTZ/BL73TSGJDS/hTfKSTYfksdKHGStdfıasg|Yes
 |SSH_USER  |Ssh user for accessing to OpsManager vm. Default is ubuntu |SSH_USER=ubuntu|No
 |SSH_KEY  |Ssh key for accessing to OpsManager vm. |SSH_KEY=-----BEGIN RSA PRIVATE KEY-----\nJSKLJnsd....\n...YASGDklbj\n-----END RSA PRIVATE KEY----- |Yes
