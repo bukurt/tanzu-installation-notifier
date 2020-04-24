@@ -17,8 +17,8 @@ try:
     slack_headers = {
         'Content-type': 'application/json',
     }
-    sleep_time = os.environ['API_REQUEST_CYCLE']            # seconds
-    run_inform_period = os.environ['RUNNING_INFORM_PERIOD']    # times sleep_time
+    sleep_time = int(os.environ['API_REQUEST_CYCLE'])            # seconds
+    run_inform_period = int(os.environ['RUNNING_INFORM_PERIOD'])    # times sleep_time
     
     # Get access-token
     access_token = ''

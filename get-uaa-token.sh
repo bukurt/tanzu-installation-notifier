@@ -1,8 +1,8 @@
 #!/bin/bash
 
-if [ -z $OPSMAN_IP ] || [ -z $OPSMAN_USER ] || [ -z $OPSMAN_PASSWORD ]; then
+if [ -z $OPSMAN_IP ] || [ -z $OPSMAN_USER ]; then
   echo "Tanzu ops manager informations are missing."
-  echo "Be sure OPSMAN_IP, OPSMAN_USER and OPSMAN_PASSWORD variables are set."
+  echo "Be sure OPSMAN_IP and OPSMAN_USER variables are set."
   exit 1
 fi
 
@@ -21,12 +21,17 @@ if [ ! -f /root/.ssh/id_rsa ]; then
   chmod 600 /root/.ssh/id_rsa
 fi
 
+echo $OPSMAN_USER > opsman_user
+scp opsman_user $SSH_USER@$OPSMAN_IP:~/opsman_user
+
 ssh -l $SSH_USER $OPSMAN_IP 'bash -s' << 'ENDSSH'
-	uaac target http://localhost:8080/uaa > /dev/null
-	sec=`echo $OPSMAN_PASSWORD | base64 --decode`
-	uaac token owner get opsman $OPSMAN_USER -s "" -p $sec > /dev/null
-	token=$(uaac context | grep access_token | awk '{print $2}')
-	echo $token | tr -d '\n'
+        uaac target http://localhost:8080/uaa > /dev/null
+        opsman_user=`cat ~/opsman_user`
+        sec=`sudo grep "opsman.admin" /home/tempest-web/ramdisk/uaa/config/uaa.yml | grep $opsman_user | awk -F "|" '{print $2}'`
+        rm -f ~/opsman_user
+        uaac token owner get opsman $opsman_user -s "" -p $sec > /dev/null
+        token=$(uaac context | grep access_token | awk '{print $2}')
+        echo $token | tr -d '\n'
 ENDSSH
 
 
