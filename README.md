@@ -1,4 +1,4 @@
-# VMware Tanzu (Pivotal) Installation Notifier
+# VMware Tanzu (Pivotal) Installation Slack Notifier
 When a new update or upgrade process is started in Tanzu Application Service (TAS / PAS / PCF) or VMware Enterprise PKS, people usually tracks progress in Ops Manager UI. But it is usually difficult. With this repo you can simply build/run docker image and get installation notification from your slack app.
 
 Hit the apply button and get slack notifications.
@@ -21,7 +21,7 @@ Run!
 Optionally you can build image locally. Edit docker-compose.yaml and run!
 
     $ docker build . -t tanzu-install-watcher:local
-    $ sed -i 's/bkurt\/tanzu-install-watcher:0.1/tanzu-install-watcher:local/g' docker-compose.yml
+    $ sed -i 's/bkurt\/tanzu-install-watcher:latest/tanzu-install-watcher:local/g' docker-compose.yml
     $ docker-compose up -d
     
 # Configuration Reference
